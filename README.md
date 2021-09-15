@@ -1,17 +1,26 @@
-# covid
+# Covid-19 Flutter
 
-A new Flutter project.
+
+# Preview App
+
+<p align="left">
+  <img width="180" src="./screenshort/241460093_4685879078111429_1383919680335908983_n.jpg" alt="1" hspace="20"/>
+  <img width="180" src="./screenshort/241094525_396616785410150_3619783771607123271_n.jpg" alt="2" hspace="20"/>
+  <img width="180" src="./screenshort/241958297_248338767193599_1939643983083385280_n.jpg" alt="2" hspace="20"/>
+</p>
 
 ## Getting Started
+Note: You already need to have Flutter installed.
+<pre>
+# clone the repo
+git clone https://github.com/kai63001/covid19flutter.git 
 
-This project is a starting point for a Flutter application.
+# move to the cloned repo
+cd flutter-movies-app
 
-A few resources to get you started if this is your first Flutter project:
+# get dependencies
+flutter pub get
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# covid19flutter
+# run application
+flutter run
+</pre>
