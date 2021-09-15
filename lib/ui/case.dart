@@ -6,9 +6,15 @@ class Case extends StatelessWidget {
   const Case({
     Key? key,
     required this.size,
+    required this.today,
+    required this.count,
+    required this.countAll,
   }) : super(key: key);
 
   final Size size;
+  final bool today;
+  final int count;
+  final int countAll;
 
   @override
   Widget build(BuildContext context) {
@@ -35,18 +41,26 @@ class Case extends StatelessWidget {
             children: [
               Image.asset('assets/images/virus.png'),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    intl.NumberFormat.decimalPattern().format(13798),
-                    style: GoogleFonts.fredokaOne(
-                      textStyle: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 40,
-                          letterSpacing: .5),
+                  SizedBox(
+                    width: size.width * 0.4,
+                    child: FittedBox(
+                      fit: BoxFit.cover,
+                      child: Text(
+                        intl.NumberFormat.decimalPattern()
+                            .format(today ? count : countAll),
+                        style: GoogleFonts.fredokaOne(
+                          textStyle: const TextStyle(
+                              color: Colors.black,
+                              // fontSize: 40,
+                              letterSpacing: .5),
+                        ),
+                      ),
                     ),
                   ),
                   Text(
-                    'TODAY',
+                    today ? 'TODAY' : 'TOTAL',
                     style: GoogleFonts.fredokaOne(
                       textStyle: TextStyle(
                           color: Colors.grey[400],

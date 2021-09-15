@@ -88,7 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 20,
               ),
               selectionCase(size),
-              Case(size: size),
+              Case(
+                size: size,
+                count: covidData["todayCases"],
+                today: today,
+                countAll: covidData["cases"],
+              ),
               Country(),
               SizedBox(
                 width: size.width * 0.8,
