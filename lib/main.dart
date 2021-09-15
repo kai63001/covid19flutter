@@ -124,69 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 20,
               ),
-              SizedBox(
-                width: size.width * 0.8,
-                child: Row(
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    Expanded(
-                        child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(10)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: const Offset(
-                                      0, 5), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 40,
-                                    height: 40,
-                                    decoration: BoxDecoration(
-                                      color: Colors.blue,
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(10)),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Image.asset(
-                                        "assets/images/hospital.png",
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Hospital',
-                                    style: GoogleFonts.fredokaOne(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 15,
-                                          letterSpacing: .5),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ))),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Categoly(),
-                  ],
-                ),
-              )
+              Categoly(size: size)
             ],
           ),
         ),
