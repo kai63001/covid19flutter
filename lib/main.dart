@@ -6,6 +6,7 @@ import 'package:covid/ui/case.dart';
 import 'package:covid/ui/country.dart';
 import 'package:covid/ui/death.dart';
 import 'package:covid/ui/go_home.dart';
+import 'package:covid/ui/simp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -115,6 +116,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 20,
+              ),
+              Simp(size: size),
             ],
           ),
         ),
