@@ -1,8 +1,13 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
+import 'package:covid/ui/case.dart';
+import 'package:covid/ui/country.dart';
+import 'package:covid/ui/death.dart';
+import 'package:covid/ui/go_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart' as intl;
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -42,63 +47,35 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Stack(
-          children: [
-            // Box Main
-            Positioned(
-                top: size.height * 0.05,
-                width: size.width,
-                child: Center(
-                  child: Container(
-                    height: 130,
-                    width: size.width * 0.8,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.05),
-                          spreadRadius: 2,
-                          blurRadius: 5,
-                          offset: Offset(0, 5), // changes position of shadow
-                        ),
-                      ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Box Main
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white
+                ),
+                child: Text("romeo"),
+              ),
+              Case(size: size),
+              Country(),
+              SizedBox(
+                width: size.width * 0.8,
+                child: Row(
+                  children: const [
+                    Death(),
+                    SizedBox(
+                      width: 10,
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(18.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset('assets/images/virus.png'),
-                          Column(
-                            children: [
-                              Text(
-                                '500',
-                                style: GoogleFonts.fredokaOne(
-                                  textStyle: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 40,
-                                      letterSpacing: .5),
-                                ),
-                              ),
-                              Text(
-                                'TODAY',
-                                style: GoogleFonts.fredokaOne(
-                                  textStyle: TextStyle(
-                                      color: Colors.grey[400],
-                                      fontSize: 20,
-                                      letterSpacing: .5),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                )),
-            
-          ],
+                    GoHome(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
