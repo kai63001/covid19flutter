@@ -98,8 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 width: size.width * 0.8,
                 child: Row(
-                  children: const [
-                    Death(),
+                  children: [
+                    Death(
+                      countAll: covidData["deaths"],
+                      today: today,
+                      count: covidData["todayDeaths"],
+                    ),
                     SizedBox(
                       width: 10,
                     ),
