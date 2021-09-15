@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  late Map<String, dynamic> covidData;
+  Map<String, dynamic> covidData = {};
 
   @override
   void initState() {
@@ -72,6 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    if (covidData["country"] == null) {
+      return Scaffold(
+        body: Center(child: Text("LOADING")),
+      );
+    }
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
