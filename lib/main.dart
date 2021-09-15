@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+import 'package:covid/ui/buy.dart';
 import 'package:covid/ui/case.dart';
 import 'package:covid/ui/categoly.dart';
 import 'package:covid/ui/country.dart';
@@ -90,6 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 20,
               ),
               selectionCase(size),
+              SizedBox(
+                height: 20,
+              ),
               Case(
                 size: size,
                 count: covidData["todayCases"],
@@ -124,7 +128,14 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 20,
               ),
-              Categoly(size: size)
+              Categoly(size: size),
+              SizedBox(
+                height: 20,
+              ),
+              Buy(),
+              SizedBox(
+                height: 200,
+              ),
             ],
           ),
         ),

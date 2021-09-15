@@ -27,7 +27,7 @@ class Categoly extends StatelessWidget {
                         const BorderRadius.all(Radius.circular(10)),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.05),
+                        color: Colors.grey.withOpacity(0.1),
                         spreadRadius: 2,
                         blurRadius: 5,
                         offset: const Offset(
@@ -81,7 +81,7 @@ class Categoly extends StatelessWidget {
                         const BorderRadius.all(Radius.circular(10)),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.05),
+                        color: Colors.grey.withOpacity(0.1),
                         spreadRadius: 2,
                         blurRadius: 5,
                         offset: const Offset(
