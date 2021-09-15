@@ -48,11 +48,17 @@ class Death extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                today ? 'TODAY' : 'TOTAL',
-                style: GoogleFonts.fredokaOne(
-                  textStyle: TextStyle(
-                      color: Colors.grey[400], fontSize: 20, letterSpacing: .5),
+              SizedBox(
+                child: FittedBox(
+                  fit: BoxFit.cover,
+
+                  child: Text(
+                    today ? 'TODAY' : 'TOTAL',
+                    style: GoogleFonts.fredokaOne(
+                      textStyle: TextStyle(
+                          color: Colors.grey[400], fontSize: 20, letterSpacing: .5),
+                    ),
+                  ),
                 ),
               ),
             ],

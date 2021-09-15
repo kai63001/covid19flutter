@@ -45,7 +45,7 @@ class Case extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: size.width * 0.4,
-                    height: 60,
+                    height: 50,
                     child: FittedBox(
                       fit: BoxFit.cover,
                       child: Text(

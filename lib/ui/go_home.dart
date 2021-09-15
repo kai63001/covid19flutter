@@ -7,7 +7,13 @@ import 'package:intl/intl.dart' as intl;
 class GoHome extends StatelessWidget {
   const GoHome({
     Key? key,
+    required this.today,
+    required this.count,
+    required this.countAll,
   }) : super(key: key);
+  final bool today;
+  final int count;
+  final int countAll;
 
   @override
   Widget build(BuildContext context) {
@@ -29,22 +35,24 @@ class GoHome extends StatelessWidget {
         padding: const EdgeInsets.all(18.0),
         child: Column(
           children: [
-            Text(
-              intl.NumberFormat.decimalPattern().format(14135),
-              style: GoogleFonts.fredokaOne(
-                textStyle: TextStyle(
-                    color: Colors.green,
-                    fontSize: 40,
-                    letterSpacing: .5),
+            SizedBox(
+                child: FittedBox(
+                  fit: BoxFit.cover,
+                  child: Text(
+                    intl.NumberFormat.decimalPattern()
+                        .format(today ? count : countAll),
+                    style: GoogleFonts.fredokaOne(
+                      textStyle: const TextStyle(
+                          color: Colors.green, fontSize: 40, letterSpacing: .5),
+                    ),
+                  ),
+                ),
               ),
-            ),
             Text(
-              'TODAY',
+              today ? 'TODAY' : 'TOTAL',
               style: GoogleFonts.fredokaOne(
                 textStyle: TextStyle(
-                    color: Colors.grey[400],
-                    fontSize: 20,
-                    letterSpacing: .5),
+                    color: Colors.grey[400], fontSize: 20, letterSpacing: .5),
               ),
             ),
           ],

@@ -107,7 +107,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     SizedBox(
                       width: 10,
                     ),
-                    GoHome(),
+                    GoHome(
+                      countAll: covidData["recovered"],
+                      today: today,
+                      count: covidData["todayRecovered"],
+                    ),
                   ],
                 ),
               ),
