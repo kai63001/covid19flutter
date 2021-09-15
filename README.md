@@ -16,7 +16,7 @@ Note: You already need to have Flutter installed.
 git clone https://github.com/kai63001/covid19flutter.git 
 
 # move to the cloned repo
-cd flutter-movies-app
+cd covid19flutter
 
 # get dependencies
 flutter pub get
